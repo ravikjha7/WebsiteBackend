@@ -17,7 +17,8 @@ const UserSchema = new Mongoose.Schema({
   },
   role: {
     type: String,
-    default: "Member"
+    default: "member",
+    enum: ["developer", "editor", "user"],
   },
   email : {
     type: String,
