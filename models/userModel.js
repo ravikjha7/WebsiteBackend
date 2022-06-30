@@ -42,6 +42,18 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true],
   },
+  linkedin: {
+    type: String,
+    required: [true],
+  },
+  instagram: {
+    type: String,
+    // required: [true],
+  },
+  areaOfInterest: {
+    type: String,
+    required: [true],
+  },
 });
 
 userSchema.pre("save", async function (next) {
