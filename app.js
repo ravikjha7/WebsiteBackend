@@ -7,8 +7,10 @@ const app = express();
 app.use(express.json({ limit: "10kb" }));
 
 const userRouter = require("./routes/userRoutes");
+const blogRouter = require("./routes/blogRoutes");
 
-app.use("/api/v1/users", userRouter);
+app.use(userRouter);
+app.use(blogRouter);
 
 app.use(globalErrorHandler);
 
