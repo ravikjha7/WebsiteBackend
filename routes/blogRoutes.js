@@ -16,4 +16,7 @@ router
   .route("/:id/upload")
   .post(upload.single("file"), blogCOntrolerr.uploadBlog);
 
+router.get("*", (request, response) => {
+  response.sendFile(path.join(__dirname, "etsa2/build", "index.html"));
+});
 module.exports = router;
