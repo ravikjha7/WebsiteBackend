@@ -16,11 +16,11 @@ const eventSchema = new mongoose.Schema({
   photo: String,
 
   conductedBy: {
-    type: String,
+    type: [String],
     required: true,
   },
   conductedOn: {
-    type: Date,
+    type: String,
     required: true,
   },
   venue: {

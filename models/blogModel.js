@@ -18,7 +18,7 @@ const blogSchema = new mongoose.Schema({
     default: Date.now,
   },
   createdBy: {
-    type: String,
+    type: [String],
     required: [true, "Please add a name"],
   },
   githubofAuthor: {
